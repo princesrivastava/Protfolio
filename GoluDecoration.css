@@ -1,0 +1,35 @@
+p
+{
+ color:blue;
+}
+.p1
+{
+ color:black;
+ text-align:center;
+} 
+#p2
+{
+ color:brown;
+}
+#p3
+{
+	color:brown;
+	font-family:Brush Script Mt;
+	font-size:22px;
+	text-align:justify;
+	border-top-style:solid;
+	border-bottom-style:solid;
+	border-top-color:red;
+	border-bottom-color:red;
+	border-left-style:dotted;
+	border-right-style:dotted;
+	border-left-color:darkblue;
+	border-right-color:darkblue;
+	border-radius:2px;
+}	
+#p4
+{
+	font-family:Lucida Handwriting;
+	font-size:30 px;
+	word-spacing: 4px;
+}

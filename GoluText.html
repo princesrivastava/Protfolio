@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<!-- to link external js file here-->
+	  <script type="text/javascript" src="GoluJavaScript.js"></script> <!-- here, NO text or any thing shall be written between opening and closing tag of script -->
+    <!-- To link external CSS-->
+      <link rel="stylesheet" type="text/css" href="GoluDecoration.css" />
+	<!-- To link external JQuery js file in this page-->
+      <script src="jquery3.6.js" ></script> <!--  It must be written in the head tag-->
+	<!-- Coding part of the jquery starts here below -->
+	  <script>
+	     $(document).ready(function()
+	      {	                             <!-- ready function is used to execute this jquery code only when whole html page gets loaded -->
+	        $("#b1").click(function()
+			 { 
+			     if($(this).html()=="Hide this image")         <!-- Syntax for comparing html elements-->
+			      {
+		            $(this).html("Show this image");		    <!-- this keyword represents the thing which click function calls.-->
+		            $("#j1").hide();				            <!-- hide() function hides the image-->
+		          }
+				 else
+				  {
+				    $(this).html("Hide this image");			 <!-- this keyword represents the thing which click function calls.-->
+		            $("#j1").show();
+				  } 
+			   		   
+		     });
+		   });
+		</script>
+	  <!-- CSS PART - INTERNAL STYLE SHEET STARTS HERE -->
+      <style>
+        iframe
+         {
+           width:100%;
+           height:450px;
+         }
+        #img1 
+         {
+           margin-left:auto;  
+           margin-right:auto;  
+           display:block; 
+         } 
+		.span1
+          {
+            color:Black;
+            font-style:italic;
+			text-decoration:underline;
+			font-weight:bold;
+          } 
+		 body
+          {
+           background-color:#f4bbff;
+          }	
+         .a1:active
+          {
+            color:orange;
+          } 
+         .a1:hover
+          {
+            color:green;
+          } 
+         #h1
+          {  
+             position:fixed;
+             right:10px;			 
+             background-color:black;
+			 border-width:50px;
+			 padding:60px;
+			 margin:10px;
+          } 			 
+         		 
+      </style>  <!-- CSS :Internal Style sheet Ends-->
+	  <title>Prince Web page </title>
+    </head>
+        <body>
+             <h1 align ="center" style="color:red;font-family:times roman;text-shadow:4px 2px 4px gray;" id="h1"> <u>Prince Srivastava</u></h1> <!-- CSS inline style sheet is used here.-->
+             <br/>  <!-- to break line -->
+             <img border="2px" height="200px" width="200px" src="Images\IMG_20211229_120308.png" id="img1" />
+             <hr/>    <!-- To Draw Horizontal Line Throughout  the web page -->
+             <p class="p1" onmouseover="effect1()" onmouseout="effectout2()" id="p5">Hii,Guys welcome to my first web page.My name is as above.I live in Gorakhpur,U.P. </p>
+             <p style="font-weight:bold;padding-left:15px;">Some commonly used computer languages are as follows:  </p>
+             <ul type="square"> 
+                <li>C</li>
+                <li>CPP</li>
+                <li>HTML</LI>
+                <li> php</li>
+             <br/>
+			 <!-- To place Javascript internally and here the code is written between opening and closing of script tag-->
+			 <script type="text/javascript">
+			     document.write("Javascript is internally placed here.");
+			 </script> 
+             <p style="color:green;text-align:left"; class="p1" onmouseover="effect11()" onmouseout="effectout22()">My education details are :</p> <!-- onmouseover & onmouseout are event attributes of javascript-->
+             <ol>
+                <li>10 </li>
+                <li> 12</li>
+                <li>B.tech</li>
+             </ol>
+             <br/>
+             <p id="c1" onmouseover="effect11()" onmouseout="effectout22()">I am acquiring some coding skills from <a href="https://www.mysirg.com/" target="blank_" style="color:darkgreen;">click here.<a/><p/>
+             <br/>
+             <p> We'll now have a look at some of the commonly used programming languages. </p>
+             <table border="2px" width="300px" cellspacing="0px" cellpadding="1px" bgcolor="yellow" >
+                 <tr>
+                 <th bgcolor="rgb(100,200,12)" >S.NO.</th>
+                 <th>Name</th>
+                 <th bgcolor="green">Inventor</th> 
+                 </tr>
+                 <tr>
+                 <td>1</td>
+                 <td bgcolor="orange">C++ </td>
+                 <td> Bjarne Stroustrup</td>
+                 </tr>
+                 <tr>
+                 <td bgcolor="lightpink">2</td>
+                 <td> Java </td>
+                 <td bgcolor="red"> James Gosling</td>
+                 </tr>
+                 <tr>
+                 <td> 3 </td>
+                 <td bgcolor="lightgreen">Python</td>
+                 <td> Guido van Rossum</td>
+                 </tr>
+                 <td bgcolor="lightmaroon" colspan="3">Almost all coders prefer these languages the most. </td>
+             </table>
+             </br>
+             <p>If you too are interested in learning with me,please fill some of the asked details below: </p>
+             <form action="regristration.php" target="blank_" method="post" onsubmit=" return validate()"  >   <!-- "return" keyword is used here while calling function. -->
+                <table align="center" border="1px" bgcolor="lightgreen" width ="400px" >
+				    <tr>
+				    <td> Name </td>
+                    <td><input type ="text" name="Username" placeholder="Enter your Name here";  required  /></td>  <!-- input tag is a self closing tag.-->
+                    </tr>
+                    <tr>
+                    <td> Password </td>
+                    <td><input type ="password" name="password" id="v1" placeholder="Enter your password here" required /></td>  <!-- To make any field mandatory to fill REQUIRED keyword is used in input tag.-->
+                    </tr>
+                    <tr>
+                    <td> Gender </td>
+                    <td><input type="radio" name="gender"/>M<input type ="radio" name="gender"/>F</td>
+                    </tr>
+                    <tr> 
+                    <td> Date </td>
+                    <td><input type="date" name="date"/></td> 
+                    </tr>
+                    <tr>
+                    <td>Courses</td>
+                    <td><input type="checkbox" name="check[]"/>CPP<input type ="checkbox" name="check[]"/>PHP<input type ="checkbox" name="check[]"/>DBMS</td> <!-- in CASE OF CHECKBOXES,VALUE OF NAME ATTRIBUTE SHOULD BE ALWAYS SAME FOR .PHP CODING EASE-->
+                    </tr>
+                    <tr>
+                    <td colspan="2" bgcolor="orange"> <input type ="Submit" name="submit"/><input type="reset" /></td>
+                    </tr>
+                 </table>
+              </form>
+              <p id="p2">You can compile and execute your codes online.Below are the mentioned links of some such websites which can be seen in the<span class="span1"> frame </span>below by clicking on the<span class="span1"> websites </span> name .</p>
+              <iframe  src="i_frame.txt" name="golu" style="border:2px solid tomato;" ></iframe>
+              <ul align="center" type="circle" >
+                 <li><a href="https://www.onlinegdb.com/" target="golu" class="a1" >GDB Online Compiler</a>
+                 <li><a href="https://www.programiz.com/cpp-programming/online-compiler/" target="golu" class="a1">Programiz Compiler</a>
+                 <li><a href="https://ideone.com/" target="golu" class="a1"> Ideone Compiler</a>  
+              </ul>
+			  <p style="text-align=left;color:black;font-family:Georgia;"> 
+			   All the above things can only be done with ease using computers.Infact ,computers are the such machines which 
+			   are making our lives easier with developing new technologies. Let's know about history of computers.
+			  </p> 
+			  <p id="p3">
+			   Computers and electronics play an enormous role in today's society, impacting everything from communication and medicine to science.
+
+               Although computers are typically viewed as a modern invention involving electronics, computing predates the use of electrical devices. The ancient abacus was perhaps the first digital computing device. Analog computing dates back several millennia as primitive computing devices were used as early as the ancient Greeks and Romans, the most known complex of which being the Antikythera mechanism. Later devices such as the castle clock (1206), slide rule (c. 1624) and Babbage's Difference Engine (1822) are other examples of early mechanical analog computers.
+
+               The introduction of electric power in the 19th century led to the rise of electrical and hybrid electro-mechanical devices to carry out both digital (Hollerith punch-card machine) and analog (Bush’s differential analyzer) calculation. Telephone switching came to be based on this technology, which led to the development of machines that we would recognize as early computers.
+
+               The presentation of the Edison Effect in 1885 provided the theoretical background for electronic devices. Originally in the form of vacuum tubes, electronic components were rapidly integrated into electric devices, revolutionizing radio and later television. It was in computers however, where the full impact of electronics was felt. Analog computers used to calculate ballistics were crucial to the outcome of World War II, and the Colossus and the ENIAC, the two earliest electronic digital computers, were developed during the war.
+
+               With the invention of solid-state electronics, the transistor and ultimately the integrated circuit, computers would become much smaller and eventually affordable for the average consumer. Today “computers” are present in nearly every aspect of everyday life, from watches to automobiles.
+              </p> 			  
+			  <p onmouseover="effect()" onmouseout="effectout()" id="p4">   <!-- Binding is done here-->
+			   This paragraph will tell us how the javascript (.js) code can effect the html elements. This paragraph will be managed with the js code which is linked externally.
+			   Basically this is done by binding the html element,js code {functions()} and events all together.Here you will see how the background color of this paragraph
+			   changes when mouse cursor comes over it.
+			  </p>
+			  <p style="font-family:Times New Roman;font-size:50 px;line-height:1.4 ; color:black " >
+	              Now we will have the use of JQuery in our Html page.Below is a button with caption "hide..." along with an image sidewards.On clicking the button 
+                  it's caption changes to "show..." and the image disappears.
+              </p>
+              <button id="b1" > Hide this image </button>	
+			  </br>
+			  <img style="margin-left:auto; margin-right:auto; display:block; width:50%; height:50%" src="Images\indian-flag-38892.png" id="j1" />
+			  <p style="text-align:center;color:Red;right:10px;background-color:lightblue; border-width:30px; padding:20px;margin:10px;">
+			  <b> THANK YOU FOR VISITING MY PAGE.HAVE A GOOD DAY AHAEAD.</b>
+			  </p>
+</body>
+</html>			 		 
+           
